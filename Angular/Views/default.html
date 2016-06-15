@@ -1,0 +1,19 @@
+
+<div ng-controller="ctrl">
+    <md-content class="md-padding box" layout="row" layout-wrap>
+        <md-card   ng-repeat="data in dataItem |filter:SearchCritera" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" >
+            <img class="height-flx" src="{{data.Poster}}" alt=""/>
+            <md-card-content >
+                <h3>{{data.Title}}</h3>
+                <h5>Plot: {{data.Plot}}</h5>
+                <p>Imdb Ratings : {{data.imdbRating}}</p>
+                <md-button class="md-warn md-raised md-hue-2" href="#/detail/{{data.id}}">Details</md-button>
+
+            </md-card-content>
+
+        </md-card>
+    </md-content>
+
+</div>
+
+
